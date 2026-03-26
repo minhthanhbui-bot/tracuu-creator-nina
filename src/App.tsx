@@ -50,9 +50,9 @@ export default function App() {
             return {
               accountName: row[4]?.trim() || '', // Cột E
               fullName: row[3]?.trim() || '',    // Cột D
-              tiktokLink: row[10]?.trim() || '', // Cột K
+              tiktokLink: row[16]?.trim() || '', // Cột Q
               isRegistered: row[0]?.trim().toUpperCase() === 'TRUE' || row[0]?.trim() === '1', // Cột A
-              mcnStatus: row[19]?.trim() || '',  // Cột T (STATUS)
+              mcnStatus: row[20]?.trim() || '',  // Cột U
               approvalStatus: row[1]?.trim() || '' // Cột B
             };
           }).filter(item => item.accountName !== '');
@@ -277,7 +277,7 @@ export default function App() {
                 <div className="h-full flex flex-col items-center justify-center text-slate-400 space-y-4">
                   <Search size={48} strokeWidth={1} />
                   <p className="text-sm font-medium italic">
-                    {hasSearched ? "Không tìm thấy tài khoản này" : "Vui lòng nhập account name để tra cứu kết quả"}
+                    {hasSearched ? "Chưa có trong danh sách" : "Vui lòng nhập account name để tra cứu kết quả"}
                   </p>
                 </div>
               )}
