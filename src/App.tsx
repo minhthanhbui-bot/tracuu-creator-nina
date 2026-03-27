@@ -88,7 +88,7 @@ export default function App() {
 
   const getStatusColor = (status: string) => {
     const s = status.toLowerCase();
-    if (s.includes('duyệt') || s.includes('thành công') || s.includes('connected')) return 'bg-emerald-100 text-emerald-700 border-emerald-200';
+    if (s.includes('duyệt') || s.includes('thành công') || s.includes('connected') || s.includes('linked')) return 'bg-emerald-100 text-emerald-700 border-emerald-200';
     if (s.includes('chờ') || s.includes('pending') || s.includes('requested')) return 'bg-amber-100 text-amber-700 border-amber-200';
     if (s.includes('từ chối') || s.includes('không') || s.includes('not')) return 'bg-rose-100 text-rose-700 border-rose-200';
     return 'bg-slate-100 text-slate-700 border-slate-200';
@@ -96,7 +96,7 @@ export default function App() {
 
   const getStatusIcon = (status: string) => {
     const s = status.toLowerCase();
-    if (s.includes('duyệt') || s.includes('thành công') || s.includes('connected')) return <CheckCircle2 size={16} />;
+    if (s.includes('duyệt') || s.includes('thành công') || s.includes('connected') || s.includes('linked')) return <CheckCircle2 size={16} />;
     if (s.includes('chờ') || s.includes('pending') || s.includes('requested')) return <Clock size={16} />;
     if (s.includes('từ chối') || s.includes('không') || s.includes('not')) return <XCircle size={16} />;
     return <Info size={16} />;
